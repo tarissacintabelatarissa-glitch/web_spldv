@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Edumath - Materi & Video SPLDV</title>
+
+    <link rel="stylesheet" href="../tugas web/assets/css/materi.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- MathJax untuk Rumus Matematika -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="assets/Gambar/logo 2.jpeg" alt="Logo Edumath"/>
+            <a href="index.html">Edumath</a>
+        </div>
+        <nav class="navbar">
+            <a href="../tugas web/index.html">Masuk</a>
+            <a href="../tugas web/pages/beranda.html">Beranda</a>
+            <a href="materi.html" class="active">Materi</a>
+            <a href="../tugas web/contoh soal.html">contoh</a>
+        </nav>
+    </header>
+
+    <section class="hero-materi">
+        <div class="hero-text">
+            <span class="hero-tag">📘 Materi Lengkap SPLDV</span>
+            <h1>Belajar SPLDV <span>Lebih Interaktif</span> dan Menyenangkan</h1>
+            <p>Pelajari konsep dasar, bentuk umum, dan metode penyelesaian SPLDV dengan tampilan modern dan mudah dipahami.</p>
+        </div>
+    </section>
+
+    <main class="materi-container">
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openMateri(event,'pengertian')">
+                <i class="fa-solid fa-book"></i> Pengertian
+            </button>
+            <button class="tab-btn" onclick="openMateri(event,'bentuk')">
+                <i class="fa-solid fa-square-root-variable"></i> Bentuk Umum
+            </button>
+            <button class="tab-btn" onclick="openMateri(event,'metode')">
+                <i class="fa-solid fa-gears"></i> Metode Penyelesaian
+            </button>
+        </div>
+
+        <div id="pengertian" class="materi-content active">
+            <div class="materi-card">
+                <h2><i class="fa-solid fa-book text-cyan"></i> Pengertian SPLDV</h2>
+                <p>Sistem Persamaan Linear Dua Variabel (SPLDV) adalah sistem yang terdiri dari dua persamaan linear dengan dua variabel.</p>
+
+                <div class="highlight-box">
+                    <h3>Ciri-Ciri SPLDV</h3>
+                    <ul>
+                        <li>Memiliki dua variabel</li>
+                        <li>Pangkat variabel satu</li>
+                        <li>Berbentuk garis lurus</li>
+                        <li>Memiliki pasangan solusi</li>
+                    </ul>
+                </div>
+
+                <div class="contoh-box">
+                    <h3>Contoh SPLDV</h3>
+                    <div class="rumus">
+                        $$2x + y = 7$$
+                        $$x - y = 2$$
+                    </div>
+                </div>
+
+                <div class="materi-section-box">
+                    <h3>🌍 SPLDV Dalam Kehidupan Sehari-hari</h3>
+                    <p>SPLDV sering digunakan dalam kehidupan sehari-hari tanpa kita sadari. Misalnya untuk menghitung harga barang, menentukan keuntungan, menghitung umur, hingga perencanaan bisnis.</p>
+                    <div class="kehidupan-grid">
+                        <div class="kehidupan-card">
+                            <h4>🛒 Belanja</h4>
+                            <p>Menentukan harga satuan barang dari pembelian paket.</p>
+                        </div>
+                        <div class="kehidupan-card">
+                            <h4>💰 Bisnis</h4>
+                            <p>Menghitung keuntungan dan modal usaha.</p>
+                        </div>
+                        <div class="kehidupan-card">
+                            <h4>🚗 Transportasi</h4>
+                            <p>Menghitung tarif kendaraan berdasarkan jarak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="materi-section-box">
+                    <h3>✨ Contoh Soal Kehidupan Sehari-hari</h3>
+                    <div class="contoh-box">
+                        <p>Ani membeli:</p>
+                        <ul>
+                            <li>2 buku dan 1 pensil seharga Rp11.000</li>
+                            <li>1 buku dan 2 pensil seharga Rp10.000</li>
+                        </ul>
+                        <p>Tentukan harga 1 buku dan 1 pensil.</p>
+                        <hr>
+                        $$2x + y = 11000$$
+                        $$x + 2y = 10000$$
+                        <p>Dengan metode eliminasi diperoleh:</p>
+                        $$x = 4000$$
+                        $$y = 3000$$
+                        <p>Jadi:</p>
+                        <ul>
+                            <li>Harga buku = Rp4.000</li>
+                            <li>Harga pensil = Rp3.000</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="materi-section-box">
+                    <h3>🔥 Fakta Menarik SPLDV</h3>
+                    <div class="fakta-grid">
+                        <div class="fakta-card">
+                            <h4>📈 Grafik</h4>
+                            <p>SPLDV selalu membentuk garis lurus pada bidang kartesius.</p>
+                        </div>
+                        <div class="fakta-card">
+                            <h4>🧠 Logika</h4>
+                            <p>SPLDV melatih kemampuan berpikir logis dan analitis.</p>
+                        </div>
+                        <div class="fakta-card">
+                            <h4>💻 Teknologi</h4>
+                            <p>SPLDV digunakan dalam pemrograman, AI, dan analisis data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bentuk" class="materi-content">
+            <div class="materi-card">
+                <h2><i class="fa-solid fa-square-root-variable"></i> Bentuk Umum SPLDV</h2>
+                <div class="rumus-box">
+                    $$ax + by = c$$
+                    $$dx + ey = f$$
+                </div>
+                <div class="grid-box">
+                    <div class="info-box">
+                        <h3>Variabel</h3>
+                        <p>x dan y</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Koefisien</h3>
+                        <p>a, b, d, e</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Konstanta</h3>
+                        <p>c dan f</p>
+                    </div>
+                </div>
+                <div class="contoh-box">
+                    <h3>Contoh Bentuk Umum</h3>
+                    $$3x + 2y = 12$$
+                    $$x - y = 4$$
+                </div>
+            </div>
+        </div>
+
+        <div id="metode" class="materi-content">
+            <div class="materi-card">
+                <h2><i class="fa-solid fa-gears"></i> Metode Penyelesaian SPLDV</h2>
+                <p>Ada 3 metode utama untuk menyelesaikan SPLDV.</p>
+                
+                <div class="sub-methods">
+                    <button class="sub-btn" onclick="toggleSubMetode('sub-eliminasi')">Eliminasi</button>
+                    <button class="sub-btn" onclick="toggleSubMetode('sub-substitusi')">Substitusi</button>
+                    <button class="sub-btn" onclick="toggleSubMetode('sub-grafik')">Grafik</button>
+                </div>
+
+                <!-- SUB ELIMINASI -->
+                <div id="sub-eliminasi" class="sub-content">
+          <h3><i class="fa-solid fa-trash-can"></i> 1. Metode Eliminasi (Menghilangkan)</h3>
+          <p>Metode ini dilakukan dengan cara menyamakan koefisien salah satu variabel lalu menguranginya atau menambahkannya agar variabel tersebut habis (hilang).</p>
+          <div class="contoh-box">
+            <strong>Contoh Soal:</strong><br>
+            Eliminasi $y$ dari persamaan berikut:<br>
+            $x + y = 5$<br>
+            $2x + y = 8$<br>
+            <hr style="margin: 10px 0; border: 0.5px dashed #00d2ff;">
+            Kurangi langsung kedua persamaan di atas karena koefisien $y$ sudah sama-sama 1:<br>
+            $(x - 2x) = (5 - 8)$<br>
+            $-x = -3$ $\rightarrow$ <strong>$x = 3$</strong>
+          </div>
+        </div>
+
+                <!-- SUB SUBSTITUSI -->
+                <div id="sub-substitusi" class="sub-content">
+          <h3><i class="fa-solid fa-arrow-right-arrow-left"></i> 2. Metode Substitusi (Mengganti)</h3>
+          <p>Metode ini dilakukan dengan cara memasukkan/mengganti salah satu variabel dari satu persamaan ke persamaan lainnya.</p>
+          <div class="contoh-box">
+            <strong>Contoh Soal:</strong><br>
+            Cari nilai $x$ dan $y$ dari:<br>
+            1) $x + y = 5$ $\rightarrow$ (kita ubah menjadi $x = 5 - y$)<br>
+            2) $2x + y = 8$<br><br>
+            <strong>Langkah:</strong> Masukkan nilai $x$ ke persamaan (2):<br>
+            $2(5 - y) + y = 8$<br>
+            $10 - 2y + y = 8$<br>
+            $10 - y = 8$ $\rightarrow$ <strong>$y = 2$</strong><br>
+            Masukkan $y = 2$ ke rumus $x$: $x = 5 - 2$ $\rightarrow$ <strong>$x = 3$</strong>
+          </div>
+        </div>
+
+                <!-- SUB GRAFIK -->
+                 <div id="sub-grafik" class="sub-content">
+          <h3><i class="fa-solid fa-chart-line"></i> 3. Metode Grafik</h3>
+          <p>Metode ini dilakukan dengan cara menggambar garis lurus dari kedua persamaan pada diagram Kartesius. *Titik potong (pertemuan)* antara kedua garis tersebut adalah jawaban/himpunan penyelesaiannya.</p>
+          <div class="contoh-box">
+            <strong>Langkah Utama:</strong><br>
+            1. Cari titik potong sumbu $x$ (saat $y = 0$) dan sumbu $y$ (saat $x = 0$) dari masing-masing persamaan.<br>
+            2. Gambar garisnya pada bidang koordinat Kartesius.<br>
+            3. Amati koordinat titik potong $(x, y)$ kedua garis tersebut sebagai hasil akhirnya.
+          </div>
+        </div>
+                </div>
+            </div>
+        </div>
+
+    </main> 
+
+    <section class="video-section">
+        <div class="video-header">
+            <span>🎥 Video Pembelajaran Utama</span>
+            <h1>Belajar SPLDV Melalui Video Interaktif</h1>
+            <p>Tonton video rangkuman di bawah ini untuk memahami semua konsep SPLDV di atas dengan lebih cepat dan mudah.</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 20px;">
+            <div style="aspect-ratio: 16/9; width: 100%; max-width: 700px;">
+                <iframe src="https://www.youtube.com/embed/JW_zoOEPYl4" 
+                        style="width: 100%; height: 100%;" 
+                        frameborder="0"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    <script src="../tugas web/assets/Javascript/materi2.js"></script>
+</body>
+</html>

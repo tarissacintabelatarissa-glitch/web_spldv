@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz SPLDV — Isi Titik-Titik</title>
+    <link rel="stylesheet" href="../tugas web/assets/css/quizz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<body>
+
+<header class="header">
+        <div class="logo">
+            <img src="assets/Gambar/logo 2.jpeg" alt="Logo Edumath" />
+            <span>Edumath</span>
+        </div>
+    <div class="navbar">
+        <a href="../tugas web/pages/beranda.html">Masuk</a>
+        <a href="../tugas web/pages/beranda.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="../tugas web/contoh soal.html">contoh soal</a>
+        <a href="../tugas web/quizz.html">quizz</a>
+    </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-bg-shape shape1"></div>
+    <div class="hero-bg-shape shape2"></div>
+    <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-calculator"></i> Sistem Persamaan Linear Dua Variabel</div>
+        <h1 class="hero-title">Quiz Menguji Pemahamanmu</h1>
+        <p class="hero-sub">Uji pemahaman SPLDV kamu — Eliminasi, Substitusi & Grafik</p>
+    </div>
+    <div class="hero-wave">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 L1200,80 L0,80 Z" fill="#f0f8ff"/>
+        </svg>
+    </div>
+</div>
+
+<div class="area-quiz">
+    <div class="kotak-quiz">
+
+        <div id="layar-mulai">
+            <div class="start-ikon">
+                <div class="ikon-ring">
+                    <i class="fas fa-square-root-alt"></i>
+                </div>
+            </div>
+            <h2>Siap Mengisi?</h2>
+            <p>Ketikkan jawabanmu di kolom yang tersedia.<br>Setiap soal punya waktu <strong>30 detik</strong> dan 1 kesempatan hint!</p>
+            <div class="info-grid">
+                <div class="info-box">
+                    <div class="info-n">10</div>
+                    <div class="info-l"><i class="fas fa-list"></i> Soal</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-n">30s</div>
+                    <div class="info-l"><i class="fas fa-clock"></i> Per Soal</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-n">1</div>
+                    <div class="info-l"><i class="fas fa-lightbulb"></i> Hint</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-n">150</div>
+                    <div class="info-l"><i class="fas fa-star"></i> Poin Maks</div>
+                </div>
+            </div>
+            <div class="metode-chips">
+                <span class="m-chip elim"><i class="fas fa-minus-circle"></i> Eliminasi</span>
+                <span class="m-chip subs"><i class="fas fa-exchange-alt"></i> Substitusi</span>
+                <span class="m-chip graf"><i class="fas fa-chart-line"></i> Grafik</span>
+            </div>
+            <button class="btn-mulai" onclick="mulai()">
+                <i class="fas fa-play"></i> Mulai Quiz
+            </button>
+        </div>
+
+        <div id="layar-soal">
+            <div class="bar-atas">
+                <span class="info-soal" id="info-soal">Soal 1 / 10</span>
+                <div class="timer-chip" id="timer-chip">
+                    <svg class="timer-ring" width="38" height="38" viewBox="0 0 38 38">
+                        <circle cx="19" cy="19" r="16" stroke="rgba(255,255,255,0.25)" stroke-width="3" fill="none"/>
+                        <circle cx="19" cy="19" r="16" stroke="white" stroke-width="3" fill="none"
+                            stroke-dasharray="100.5" stroke-dashoffset="0"
+                            stroke-linecap="round" transform="rotate(-90 19 19)"
+                            id="timer-ring-progress"/>
+                    </svg>
+                    <span id="timer-angka">30</span>
+                </div>
+                <span class="skor-chip" id="skor-chip"><i class="fas fa-star"></i> 0</span>
+            </div>
+            <div class="progress-wrap">
+                <div class="progress-bar" id="progress-bar" style="width: 10%"></div>
+                <div class="progress-label" id="progress-label">10%</div>
+            </div>
+            <div class="area-soal">
+                <div class="soal-meta">
+                    <span class="topik-badge" id="topik-badge">Eliminasi</span>
+                    <span class="metode-badge" id="metode-badge">Metode Eliminasi</span>
+                </div>
+                <div class="teks-soal" id="teks-soal"></div>
+            </div>
+            <div class="hint-area">
+                <span class="label-hint"><i class="fas fa-lightbulb"></i> Hint:</span>
+                <span class="hint-chip" id="btn-hint" onclick="pakaiHint()">Tampilkan Hint</span>
+                <span id="teks-hint"></span>
+            </div>
+            <div class="kotak-ket" id="kotak-ket"></div>
+            <div class="area-btn">
+                <span class="info-hint" id="info-hint"></span>
+                <div class="btn-group">
+                    <button class="btn-cek" id="btn-cek" onclick="cekJawaban()">
+                        <i class="fas fa-check"></i> Cek Jawaban
+                    </button>
+                    <button class="btn-lanjut" id="btn-lanjut" onclick="soalBerikutnya()">
+                        Lanjut <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="layar-hasil">
+            <div class="hasil-top">
+                <div class="ikon-hasil" id="ikon-final">🏆</div>
+                <h2 id="judul-final">Quiz Selesai!</h2>
+                <p class="pesan" id="pesan-final"></p>
+            </div>
+            <div class="nilai-wrap">
+                <div class="nilai-ring">
+                    <svg width="160" height="160" viewBox="0 0 160 160">
+                        <circle cx="80" cy="80" r="68" stroke="#dbeafe" stroke-width="12" fill="none"/>
+                        <circle cx="80" cy="80" r="68" stroke="url(#grad-ring)" stroke-width="12" fill="none"
+                            stroke-dasharray="427" stroke-dashoffset="427"
+                            stroke-linecap="round" transform="rotate(-90 80 80)"
+                            id="nilai-ring-circle"/>
+                        <defs>
+                            <linearGradient id="grad-ring" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#3b82f6"/>
+                                <stop offset="100%" stop-color="#0ea5e9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="nilai-inner">
+                        <div class="nilai-n" id="nilai-final">0</div>
+                        <div class="nilai-k">dari 150</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-row">
+                <div class="stat-box benar">
+                    <div class="stat-n" id="sf-benar">0</div>
+                    <div class="stat-l">✅ Benar</div>
+                </div>
+                <div class="stat-box salah">
+                    <div class="stat-n" id="sf-salah">0</div>
+                    <div class="stat-l">❌ Salah/Waktu Habis</div>
+                </div>
+                <div class="stat-box hint">
+                    <div class="stat-n" id="sf-hint">0</div>
+                    <div class="stat-l">💡 Hint Dipakai</div>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button class="btn-main" onclick="ulangi()">
+                    <i class="fas fa-redo"></i> Ulangi Quiz
+                </button>
+                <a href="#" class="btn-out">
+                    <i class="fas fa-book-open"></i> Belajar Lagi
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../tugas web/assets/Javascript/quizz.js"></script>
+</body>
+</html>

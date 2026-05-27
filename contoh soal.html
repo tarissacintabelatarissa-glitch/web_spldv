@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metode Penyelesaian SPLDV</title>
+    
+    <link rel="stylesheet" href="../tugas web/assets/css/contoh.css">
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header class="header">
+      <div class="logo">
+        <img src="../tugas web/assets/Gambar/logo 2.jpeg" alt="Logo Edumath" />
+        <a href="index.html">Edumath</a>
+      </div>
+      <nav class="navbar">
+        <a href="../tugas web/index.html">Masuk</a>
+        <a href="../tugas web/pages/beranda.html">Beranda</a>
+        <a href="../tugas web/materi.html">Materi</a>
+        <a href="../tugas web/contoh soal.html">contoh soal</a>
+        <a href="../tugas web/quizz.html">quizz</a>
+      </nav>
+    </header>
+
+    <main class="menu-container">
+      <div class="welcome-text">
+        <h1>Selamat Datang di Website Belajar 📚</h1>
+
+        <div class="main-content">
+            <div class="section-title">
+                ⚙️ Latihan Soal & Pembahasan SPLDV
+            </div>
+
+            <div class="method-card">
+                <span class="method-badge">Metode 1</span>
+                <h3 class="method-name">Metode Eliminasi (Menghilangkan Variabel)</h3>
+                
+                <div class="soal-container">
+                    <div class="box-soal">
+                        <div class="tipe-soal">🔢 Soal Biasa</div>
+                        <div class="teks-soal">
+                            Carilah himpunan penyelesaian dari:
+                            $$\begin{cases} 2x + 3y = 8 \\ 3x - y = 1 \end{cases}$$
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Langkah 1: Eliminasi $y$ (Kalikan persamaan kedua dengan 3)</strong></p>
+                            <p>$2x + 3y = 8 \quad (\times 1) \rightarrow 2x + 3y = 8$</p>
+                            <p>$3x - y = 1 \quad (\times 3) \rightarrow 9x - 3y = 3$</p>
+                            <p>---------------------------- (+)</p>
+                            <p>$11x = 11 \rightarrow \mathbf{x = 1}$</p>
+                            <br>
+                            <p><strong>Langkah 2: Eliminasi $x$ (Samakan koefisien $x$)</strong></p>
+                            <p>$2x + 3y = 8 \quad (\times 3) \rightarrow 6x + 9y = 24$</p>
+                            <p>$3x - y = 1 \quad (\times 2) \rightarrow 6x - 2y = 2$</p>
+                            <p>---------------------------- (-)</p>
+                            <p>$11y = 22 \rightarrow \mathbf{y = 2}$</p>
+                            <p> Jadi, $\mathbf{HP = \{(1, 2)\}}$.</p>
+                        </div>
+                    </div>
+
+                    <div class="box-soal cerita">
+                        <div class="tipe-soal">📝 Soal Cerita</div>
+                        <div class="teks-soal">
+                            Andi membeli $3$ buku dan $2$ pensil seharga Rp$14.500$. Budi membeli $2$ buku dan $1$ pensil seharga Rp$9.500$. Berapa harga $1$ buku ($x$) dan $1$ pensil ($y$)?
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Model Matematika:</strong></p>
+                            <p>$$\begin{cases} 3x + 2y = 14.500 \\ 2x + y = 9.500 \end{cases}$$</p>
+                            <p><strong>Eliminasi $y$:</strong></p>
+                            <p>$3x + 2y = 14.500 \quad (\times 1) \rightarrow 3x + 2y = 14.500$</p>
+                            <p>$2x + y = 9.500 \quad (\times 2) \rightarrow 4x + 2y = 19.000$</p>
+                            <p>----------------------------------------- (-)</p>
+                            <p>$-x = -4.500 \rightarrow \mathbf{x = 4.500}$ (Harga Buku)</p>
+                            <br>
+                            <p><strong>Eliminasi $x$:</strong></p>
+                            <p>$3x + 2y = 14.500 \quad (\times 2) \rightarrow 6x + 4y = 29.000$</p>
+                            <p>$2x + y = 9.500 \quad (\times 3) \rightarrow 6x + 3y = 28.500$</p>
+                            <p>----------------------------------------- (-)</p>
+                            <p>$\mathbf{y = 500}$ (Harga Pensil)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="method-card">
+                <span class="method-badge">Metode 2</span>
+                <h3 class="method-name">Metode Substitusi (Mengganti Variabel)</h3>
+                
+                <div class="soal-container">
+                    <div class="box-soal">
+                        <div class="tipe-soal">🔢 Soal Biasa</div>
+                        <div class="teks-soal">
+                            Tentukan nilai $x$ dan $y$ dari:
+                            $$\begin{cases} x = 2y + 1 \\ 2x + 3y = 16 \end{cases}$$
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Langkah 1: Masukkan pers (1) ke pers (2)</strong></p>
+                            <p>$2(2y + 1) + 3y = 16$</p>
+                            <p>$4y + 2 + 3y = 16$</p>
+                            <p>$7y = 16 - 2$</p>
+                            <p>$7y = 14 \rightarrow \mathbf{y = 2}$</p>
+                            <br>
+                            <p><strong>Langkah 2: Masukkan nilai $y = 2$ ke pers (1)</strong></p>
+                            <p>$x = 2(2) + 1$</p>
+                            <p>$\mathbf{x = 5}$</p>
+                            <p>Jadi, nilai $\mathbf{x = 5}$ dan $\mathbf{y = 2}$.</p>
+                        </div>
+                    </div>
+
+                    <div class="box-soal cerita">
+                        <div class="tipe-soal">📝 Soal Cerita</div>
+                        <div class="teks-soal">
+                            Umur ayah ($x$) sekarang adalah $3$ kali umur anaknya ($y$). Jika selisih usia mereka adalah $26$ tahun, berapakah umur mereka masing-masing?
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Model Matematika:</strong></p>
+                            <p>$x = 3y \quad$ ... (Pers 1)</p>
+                            <p>$x - y = 26 \quad$ ... (Pers 2)</p>
+                            <br>
+                            <p><strong>Substitusikan Pers (1) ke Pers (2):</strong></p>
+                            <p>$3y - y = 26$</p>
+                            <p>$2y = 26 \rightarrow \mathbf{y = 13}$ (Umur Anak)</p>
+                            <br>
+                            <p><strong>Cari nilai $x$:</strong></p>
+                            <p>$x = 3 \times 13 \rightarrow \mathbf{x = 39}$ (Umur Ayah)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="method-card">
+                <span class="method-badge">Metode 3</span>
+                <h3 class="method-name">Metode Gabungan (Eliminasi & Substitusi)</h3>
+                
+                <div class="soal-container">
+                    <div class="box-soal">
+                        <div class="tipe-soal">🔢 Soal Biasa</div>
+                        <div class="teks-soal">
+                            Selesaikan sistem persamaan berikut:
+                            $$\begin{cases} 4x + 5y = 17 \\ 2x + 3y = 11 \end{cases}$$
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Langkah 1: Eliminasi $x$ untuk dapat $y$</strong></p>
+                            <p>$4x + 5y = 17 \quad (\times 1) \rightarrow 4x + 5y = 17$</p>
+                            <p>$2x + 3y = 11 \quad (\times 2) \rightarrow 4x + 6y = 22$</p>
+                            <p>---------------------------- (-)</p>
+                            <p>$-y = -5 \rightarrow \mathbf{y = 5}$</p>
+                            <br>
+                            <p><strong>Langkah 2: Substitusi $y = 5$ ke persamaan kedua</strong></p>
+                            <p>$2x + 3(5) = 11$</p>
+                            <p>$2x + 15 = 11$</p>
+                            <p>$2x = 11 - 15$</p>
+                            <p>$2x = -4 \rightarrow \mathbf{x = -2}$</p>
+                        </div>
+                    </div>
+
+                    <div class="box-soal cerita">
+                        <div class="tipe-soal">📝 Soal Cerita</div>
+                        <div class="teks-soal">
+                            Keliling persegi panjang adalah $44\text{ m}$. Jika panjangnya ($x$) adalah $6\text{ m}$ lebih dari lebarnya ($y$), tentukan ukuran panjang dan lebarnya!
+                        </div>
+                        <button class="btn-solusi">Lihat Solusi</button>
+                        <div class="jawaban-panel">
+                            <p><strong>Model Matematika:</strong></p>
+                            <p>$2(x + y) = 44 \rightarrow x + y = 22 \quad$ ... (Pers 1)</p>
+                            <p>$x = y + 6 \rightarrow x - y = 6 \quad$ ... (Pers 2)</p>
+                            <br>
+                            <p><strong>Langkah 1: Eliminasi $y$</strong></p>
+                            <p>$x + y = 22$</p>
+                            <p>$x - y = 6$</p>
+                            <p>-------------- (+)</p>
+                            <p>$2x = 28 \rightarrow \mathbf{x = 14\text{ m}}$ (Panjang)</p>
+                            <br>
+                            <p><strong>Langkah 2: Substitusi $x = 14$ ke Pers (1)</strong></p>
+                            <p>$14 + y = 22 \rightarrow \mathbf{y = 8\text{ m}}$ (Lebar)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../tugas web/assets/Javascript/contoh.js"></script>
+</body>
+</html>
